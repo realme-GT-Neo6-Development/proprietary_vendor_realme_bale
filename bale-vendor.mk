@@ -859,13 +859,6 @@ PRODUCT_PACKAGES += \
     vendor.display.postproc@1.0 \
     vendor.oplus.hardware.camera.aon-service-impl \
     vendor.oplus.hardware.cammidasservice@1.0 \
-    vendor.pixelworks.hardware.display-V2-ndk \
-    vendor.pixelworks.hardware.display@1.0_vendor \
-    vendor.pixelworks.hardware.display@1.1_vendor \
-    vendor.pixelworks.hardware.display@1.2_vendor \
-    vendor.pixelworks.hardware.feature-V1-ndk \
-    vendor.pixelworks.hardware.feature@1.0_vendor \
-    vendor.pixelworks.hardware.feature@1.1_vendor \
     vendor.qti.hardware.camera.aon-service-impl \
     vendor.qti.hardware.camera.offlinecamera-service-impl \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
@@ -952,11 +945,6 @@ PRODUCT_PACKAGES += \
     libzlib \
     vendor.oplus.hardware.camera_rfi-V1-service-impl \
     vendor.oplus.hardware.sendextcamcmd-V1-service-impl \
-    vendor.pixelworks.hardware.display@1.0 \
-    vendor.pixelworks.hardware.display@1.1 \
-    vendor.pixelworks.hardware.display@1.2 \
-    vendor.pixelworks.hardware.feature@1.0 \
-    vendor.pixelworks.hardware.feature@1.1 \
     odm_lib_rfsa_adsp_capi_v3_oprec_so \
     odm_lib_rfsa_adsp_libCalculator_skel_so \
     odm_lib_rfsa_adsp_libQnnHtpV73_so \

@@ -5,6 +5,7 @@
 soong_namespace {
     imports: [
         "hardware/oplus",
+        "hardware/pixelworks/interfaces",
         "hardware/qcom-caf/sm8650",
         "vendor/oneplus/sm8650-common",
         "vendor/qcom/opensource/commonsys-intf/display",
@@ -9577,8 +9578,8 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libbase",
                 "libbinder_ndk",
-                "vendor.pixelworks.hardware.feature@1.0_vendor",
-                "vendor.pixelworks.hardware.feature@1.1_vendor",
+                "vendor.pixelworks.hardware.feature@1.0",
+                "vendor.pixelworks.hardware.feature@1.1",
                 "libc++",
                 "libc",
                 "libm",
@@ -9611,9 +9612,9 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libhidlbase",
-                "vendor.pixelworks.hardware.display@1.0_vendor",
-                "vendor.pixelworks.hardware.display@1.1_vendor",
-                "vendor.pixelworks.hardware.display@1.2_vendor",
+                "vendor.pixelworks.hardware.display@1.0",
+                "vendor.pixelworks.hardware.display@1.1",
+                "vendor.pixelworks.hardware.display@1.2",
                 "libc++",
                 "libc",
                 "libm",
@@ -9650,9 +9651,9 @@ cc_prebuilt_library_shared {
                 "libpwirisfeature_vendor",
                 "libhidlbase",
                 "libhidltransport",
-                "vendor.pixelworks.hardware.display@1.0_vendor",
-                "vendor.pixelworks.hardware.display@1.1_vendor",
-                "vendor.pixelworks.hardware.display@1.2_vendor",
+                "vendor.pixelworks.hardware.display@1.0",
+                "vendor.pixelworks.hardware.display@1.1",
+                "vendor.pixelworks.hardware.display@1.2",
                 "libbase",
                 "libbinder_ndk",
                 "android.hardware.graphics.mapper@4.0",
@@ -10137,7 +10138,7 @@ cc_prebuilt_library_shared {
                 "libsdedrm",
                 "libsdmdal",
                 "libxml2",
-                "vendor.pixelworks.hardware.display@1.0_vendor",
+                "vendor.pixelworks.hardware.display@1.0",
                 "android.frameworks.stats-V1-ndk",
                 "libolc_vnd",
                 "vendor.oplus.hardware.displaypanelfeature-V1-ndk",
@@ -10959,205 +10960,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so",
             ],
             shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.display-V2-ndk",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.pixelworks.hardware.display-V2-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.display@1.0_vendor",
-    stem: "vendor.pixelworks.hardware.display@1.0",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.pixelworks.hardware.display@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.display@1.1_vendor",
-    stem: "vendor.pixelworks.hardware.display@1.1",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.pixelworks.hardware.display@1.1.so",
-            ],
-            shared_libs: [
-                "vendor.pixelworks.hardware.display@1.0_vendor",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.display@1.2_vendor",
-    stem: "vendor.pixelworks.hardware.display@1.2",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.pixelworks.hardware.display@1.2.so",
-            ],
-            shared_libs: [
-                "vendor.pixelworks.hardware.display@1.0_vendor",
-                "vendor.pixelworks.hardware.display@1.1_vendor",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.feature-V1-ndk",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.pixelworks.hardware.feature-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.feature@1.0_vendor",
-    stem: "vendor.pixelworks.hardware.feature@1.0",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.feature@1.1_vendor",
-    stem: "vendor.pixelworks.hardware.feature@1.1",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.pixelworks.hardware.feature@1.1.so",
-            ],
-            shared_libs: [
-                "vendor.pixelworks.hardware.feature@1.0_vendor",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -13673,150 +13475,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "liboemconfigurationutil",
                 "vendor.oplus.hardware.sendextcamcmd-V2-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.display@1.0",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.pixelworks.hardware.display@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.display@1.1",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.pixelworks.hardware.display@1.1.so",
-            ],
-            shared_libs: [
-                "vendor.pixelworks.hardware.display@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.display@1.2",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.pixelworks.hardware.display@1.2.so",
-            ],
-            shared_libs: [
-                "vendor.pixelworks.hardware.display@1.0",
-                "vendor.pixelworks.hardware.display@1.1",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.feature@1.0",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.pixelworks.hardware.feature@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.pixelworks.hardware.feature@1.1",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.pixelworks.hardware.feature@1.1.so",
-            ],
-            shared_libs: [
-                "vendor.pixelworks.hardware.feature@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
