@@ -8066,50 +8066,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcwb_qcom_aidl",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcwb_qcom_aidl.so",
-            ],
-            shared_libs: [
-                "libui_shim",
-                "android.hardware.graphics.composer3-V3-ndk",
-                "vendor.oplus.hardware.cwb-V1-ndk",
-                "vendor.qti.hardware.display.config-V11-ndk",
-                "vendor.qti.hardware.display.allocator@4.0",
-                "vendor.qti.hardware.display.mapper@4.0",
-                "vendor.display.config@2.0",
-                "android.hardware.graphics.common@1.2",
-                "android.hardware.graphics.mapper@4.0",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "libbinder",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libui",
-                "libdisplayconfig.qti",
-                "libqservice",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libdepthcomputation",
     owner: "realme",
     strip: {
@@ -8661,42 +8617,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libhwcsensor",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libhwcsensor.so",
-            ],
-            shared_libs: [
-                "libqservice",
-                "vendor.qti.hardware.display.postproc-V1-ndk",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "libbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libbinder_ndk",
-                "android.frameworks.sensorservice-V1-ndk",
-                "libsensorndkbridge",
                 "libc++",
                 "libc",
                 "libm",
@@ -13482,15 +13402,6 @@ prebuilt_etc_xml {
     name: "manifest_oplus_cammidasservice_aidl.xml",
     owner: "realme",
     src: "proprietary/odm/etc/vintf/manifest/manifest_oplus_cammidasservice_aidl.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    device_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "manifest_oplus_cwb_aidl.xml",
-    owner: "realme",
-    src: "proprietary/odm/etc/vintf/manifest/manifest_oplus_cwb_aidl.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     device_specific: true,
