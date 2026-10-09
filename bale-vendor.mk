@@ -1834,3 +1834,7 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.biometrics.face@1.0-service \
     vendor.oplus.hardware.cammidasservice-V1-service \
     vendor.oplus.hardware.displaypanelfeature-service
+
+PRODUCT_COPY_FILES += \
+    vendor/realme/bale/proprietary/odm/etc/temperature_profile/sys_thermal_control_config.xml:$(TARGET_COPY_OUT_ODM)/etc/temperature_profile/sys_thermal_control_config.xml \
+    vendor/realme/bale/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
