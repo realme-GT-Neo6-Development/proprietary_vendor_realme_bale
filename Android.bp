@@ -7307,6 +7307,44 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcamera2ndk_vendor",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcamera2ndk_vendor.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libfmq",
+                "libhidlbase",
+                "libhardware",
+                "libnativewindow",
+                "liblog",
+                "libutils",
+                "libstagefright_foundation",
+                "libcutils",
+                "libcamera_metadata",
+                "libmediandk",
+                "android.frameworks.cameraservice.common-V1-ndk",
+                "android.frameworks.cameraservice.device-V3-ndk",
+                "android.frameworks.cameraservice.service-V3-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcamerapostproc",
     owner: "realme",
     strip: {
@@ -16901,6 +16939,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libstfaceunlockocl",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libstfaceunlockocl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libm",
+                "libOpenCL",
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libstfd_mobile_api",
     owner: "realme",
     strip: {
@@ -17672,6 +17735,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "manifest_oplus_face.xml",
+    owner: "realme",
+    src: "proprietary/odm/etc/vintf/manifest/manifest_oplus_face.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    device_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "manifest_oplus_sendextcamcmd.xml",
     owner: "realme",
     src: "proprietary/odm/etc/vintf/manifest/manifest_oplus_sendextcamcmd.xml",
@@ -17923,6 +17995,56 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.oplus.hardware.biometrics.face@1.0-service",
+    owner: "realme",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service",
+            ],
+            shared_libs: [
+                "libbinder",
+                "liblog",
+                "libhidlbase",
+                "libhidltransport",
+                "libcutils",
+                "libhardware",
+                "libutils",
+                "libbase",
+                "libcamera2ndk_vendor",
+                "libmediandk",
+                "libnativewindow",
+                "libui",
+                "libbinder_ndk",
+                "libdmabufheap",
+                "android.hardware.biometrics.face-V3-ndk",
+                "android.hardware.biometrics.common-V3-ndk",
+                "vendor.oplus.hardware.osense.client-V1-ndk",
+                "android.hardware.keymaster-V4-ndk",
+                "libosenseaidlhalclient",
+                "vendor.oplus.hardware.commondcs-V1-ndk",
+                "libstfaceunlockocl",
+                "libion",
+                "libQSEEComAPI",
+                "libsensorndkbridge",
+                "libolc_vnd",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
     device_specific: true,
 }
 

@@ -832,6 +832,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/bale/proprietary/odm/etc/display/qdcm_calib_data_P_7_AB715_dsc_cmd_mode_panel.json:$(TARGET_COPY_OUT_ODM)/etc/display/qdcm_calib_data_P_7_AB715_dsc_cmd_mode_panel.json \
     vendor/realme/bale/proprietary/odm/etc/displaycolorfeaturecfg.xml:$(TARGET_COPY_OUT_ODM)/etc/displaycolorfeaturecfg.xml \
     vendor/realme/bale/proprietary/odm/etc/init/hw/init.oplus.display.rc:$(TARGET_COPY_OUT_ODM)/etc/init/hw/init.oplus.display.rc \
+    vendor/realme/bale/proprietary/odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc \
     vendor/realme/bale/proprietary/odm/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc \
     vendor/realme/bale/proprietary/odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc \
     vendor/realme/bale/proprietary/odm/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat:$(TARGET_COPY_OUT_ODM)/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat \
@@ -951,6 +952,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/bale/proprietary/odm/firmware/ufs/SKhynix-HN8T05DEHKX073.bin:$(TARGET_COPY_OUT_ODM)/firmware/ufs/SKhynix-HN8T05DEHKX073.bin \
     vendor/realme/bale/proprietary/odm/firmware/ufs/move_target_ufs_fw_to_oplusreserve1.sh:$(TARGET_COPY_OUT_ODM)/firmware/ufs/move_target_ufs_fw_to_oplusreserve1.sh \
     vendor/realme/bale/proprietary/odm/firmware/ufs/ufs_version_config.xml:$(TARGET_COPY_OUT_ODM)/firmware/ufs/ufs_version_config.xml \
+    vendor/realme/bale/proprietary/odm/init.oplus.face.rc:$(TARGET_COPY_OUT_ODM)/init.oplus.face.rc \
     vendor/realme/bale/proprietary/odm/lib64/camera/awb_parameter_default.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/awb_parameter_default.bin \
     vendor/realme/bale/proprietary/odm/lib64/camera/awb_parameter_qtech_imx615_front.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/awb_parameter_qtech_imx615_front.bin \
     vendor/realme/bale/proprietary/odm/lib64/camera/awb_parameter_qtech_imx882.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/awb_parameter_qtech_imx882.bin \
@@ -996,6 +998,16 @@ PRODUCT_COPY_FILES += \
     vendor/realme/bale/proprietary/odm/vendor/firmware/antdtx.b07:$(TARGET_COPY_OUT_ODM)/vendor/firmware/antdtx.b07 \
     vendor/realme/bale/proprietary/odm/vendor/firmware/antdtx.b08:$(TARGET_COPY_OUT_ODM)/vendor/firmware/antdtx.b08 \
     vendor/realme/bale/proprietary/odm/vendor/firmware/antdtx.mdt:$(TARGET_COPY_OUT_ODM)/vendor/firmware/antdtx.mdt \
+    vendor/realme/bale/proprietary/odm/vendor/firmware/facereg.b00:$(TARGET_COPY_OUT_ODM)/vendor/firmware/facereg.b00 \
+    vendor/realme/bale/proprietary/odm/vendor/firmware/facereg.b01:$(TARGET_COPY_OUT_ODM)/vendor/firmware/facereg.b01 \
+    vendor/realme/bale/proprietary/odm/vendor/firmware/facereg.b02:$(TARGET_COPY_OUT_ODM)/vendor/firmware/facereg.b02 \
+    vendor/realme/bale/proprietary/odm/vendor/firmware/facereg.b03:$(TARGET_COPY_OUT_ODM)/vendor/firmware/facereg.b03 \
+    vendor/realme/bale/proprietary/odm/vendor/firmware/facereg.b04:$(TARGET_COPY_OUT_ODM)/vendor/firmware/facereg.b04 \
+    vendor/realme/bale/proprietary/odm/vendor/firmware/facereg.b05:$(TARGET_COPY_OUT_ODM)/vendor/firmware/facereg.b05 \
+    vendor/realme/bale/proprietary/odm/vendor/firmware/facereg.b06:$(TARGET_COPY_OUT_ODM)/vendor/firmware/facereg.b06 \
+    vendor/realme/bale/proprietary/odm/vendor/firmware/facereg.b07:$(TARGET_COPY_OUT_ODM)/vendor/firmware/facereg.b07 \
+    vendor/realme/bale/proprietary/odm/vendor/firmware/facereg.b08:$(TARGET_COPY_OUT_ODM)/vendor/firmware/facereg.b08 \
+    vendor/realme/bale/proprietary/odm/vendor/firmware/facereg.mdt:$(TARGET_COPY_OUT_ODM)/vendor/firmware/facereg.mdt \
     vendor/realme/bale/proprietary/odm/vendor/firmware/uff_jv.b00:$(TARGET_COPY_OUT_ODM)/vendor/firmware/uff_jv.b00 \
     vendor/realme/bale/proprietary/odm/vendor/firmware/uff_jv.b01:$(TARGET_COPY_OUT_ODM)/vendor/firmware/uff_jv.b01 \
     vendor/realme/bale/proprietary/odm/vendor/firmware/uff_jv.b02:$(TARGET_COPY_OUT_ODM)/vendor/firmware/uff_jv.b02 \
@@ -1433,6 +1445,7 @@ PRODUCT_PACKAGES += \
     libbacklight-calib \
     libbitmlengine \
     libbitmlenginev2 \
+    libcamera2ndk_vendor \
     libcamerapostproc \
     libcamxcommonutils \
     libcamxexternalformatutils \
@@ -1759,6 +1772,7 @@ PRODUCT_PACKAGES += \
     libsharebuffer_impl \
     libsnpe_loader \
     libstface_fd_api \
+    libstfaceunlockocl \
     libstfd_mobile_api \
     libtensorflowlite_oplus \
     libtfa98xx \
@@ -1806,6 +1820,7 @@ PRODUCT_PACKAGES += \
     manifest_oplus_cammidasservice_aidl.xml \
     manifest_oplus_cwb_aidl.xml \
     manifest_oplus_displaypanelfeature_aidl.xml \
+    manifest_oplus_face.xml \
     manifest_oplus_sendextcamcmd.xml \
     vintf_manifext_aidl_panelchaplin.xml \
     feature_enabler_client \
@@ -1816,5 +1831,6 @@ PRODUCT_PACKAGES += \
     ppd \
     qdcmss \
     cwb_utils_aidl \
+    vendor.oplus.hardware.biometrics.face@1.0-service \
     vendor.oplus.hardware.cammidasservice-V1-service \
     vendor.oplus.hardware.displaypanelfeature-service
