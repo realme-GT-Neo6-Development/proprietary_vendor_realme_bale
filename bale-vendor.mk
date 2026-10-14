@@ -831,6 +831,8 @@ PRODUCT_COPY_FILES += \
     vendor/realme/bale/proprietary/odm/etc/display/qdcm_calib_data_P_3_AB714_dsc_cmd_mode_panel.json:$(TARGET_COPY_OUT_ODM)/etc/display/qdcm_calib_data_P_3_AB714_dsc_cmd_mode_panel.json \
     vendor/realme/bale/proprietary/odm/etc/display/qdcm_calib_data_P_7_AB715_dsc_cmd_mode_panel.json:$(TARGET_COPY_OUT_ODM)/etc/display/qdcm_calib_data_P_7_AB715_dsc_cmd_mode_panel.json \
     vendor/realme/bale/proprietary/odm/etc/displaycolorfeaturecfg.xml:$(TARGET_COPY_OUT_ODM)/etc/displaycolorfeaturecfg.xml \
+    vendor/realme/bale/proprietary/odm/etc/fusionlight_profile/fusionlight_Main_1_3.json:$(TARGET_COPY_OUT_ODM)/etc/fusionlight_profile/fusionlight_Main_1_3.json \
+    vendor/realme/bale/proprietary/odm/etc/fusionlight_profile/fusionlight_Main_2_3.json:$(TARGET_COPY_OUT_ODM)/etc/fusionlight_profile/fusionlight_Main_2_3.json \
     vendor/realme/bale/proprietary/odm/etc/init/hw/init.oplus.display.rc:$(TARGET_COPY_OUT_ODM)/etc/init/hw/init.oplus.display.rc \
     vendor/realme/bale/proprietary/odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc \
     vendor/realme/bale/proprietary/odm/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc \
